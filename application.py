@@ -5,7 +5,7 @@ Created on Mon Apr 13 12:30:54 2020
 @author: Rahul
 """
 import json
-from flask import Flask, redirect, url_for, render_template, request, jsonify, flash
+from flask import Flask, redirect, render_template, jsonify
 #import pandas as pd
 #from flask_cors import CORS
 from azure.storage.table import TableService
@@ -30,7 +30,7 @@ def post_data():
         if data_send == "added Successfully!!!!":
             # flash('added Successfully!!!!')
             print(data_send)
-            render_template("test.html")
+            #render_template("test.html")
             return str(data_send)
         else:
             return str(data_send)
@@ -74,5 +74,5 @@ def df_con(tasks):
     for task in tasks:
         yield task
 
-
-app.run()
+if __name__ == '__main__':
+   app.run()
