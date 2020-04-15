@@ -3,7 +3,7 @@ Flask==1.0.2
 itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 azure-ai-nspkg
 azure-applicationinsights~=0.1.0
 azure-batch~=4.1
