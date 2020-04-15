@@ -11,7 +11,7 @@ from flask import Flask, redirect, url_for, render_template, request, jsonify, f
 #from flask_cors import CORS
 from azure.storage.table import TableService
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 app.config["DEBUG"] = False
 #CORS(app)
