@@ -5,7 +5,6 @@ Created on Mon Apr 13 12:30:54 2020
 @author: Rahul
 """
 import json
-import flask
 from flask import Flask, redirect, url_for, render_template, request, jsonify, flash
 #import pandas as pd
 #from flask_cors import CORS
