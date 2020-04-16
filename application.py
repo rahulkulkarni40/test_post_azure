@@ -7,7 +7,7 @@ Created on Mon Apr 13 12:30:54 2020
 import json
 #import flask
 from flask import Flask, render_template, request
-#import pandas as pd
+import pandas as pd
 #from flask_cors import CORS
 from azure.storage.table import TableService
 
@@ -37,7 +37,7 @@ def post_data():
             return str(data_send)
 
 
-'''@app.route('/azget/', methods=['post'])
+@app.route('/azget/', methods=['post'])
 def get_data():
 
         keys = request.form["keyname"]
@@ -47,11 +47,11 @@ def get_data():
         print(query)
         data_send = connection("", query, "reterive")
         return data_send
-'''
 
 
-acc_name = 'cloudshell1751970259'
-acc_key = 'fufUNG+t4KF/qxAa4l1jObCovRMrvM4p/YO5M0jLyTK2x0L9njQLESukydU151dvIk0VVDL9xqIvTZuRPZ/D3g=='
+
+acc_name = 'cloudshell2004283367'
+acc_key = 'zHZjM6VqXI04g/flf8mqoO1OuaATuASqL4BNIE9/RuKYL0dc8eiKnfknou9WH9uJHVntppHVNsr3rjr+pcaWYA=='
 
 
 def connection(tasks, query, types):
@@ -65,10 +65,10 @@ def connection(tasks, query, types):
         # print(query)
         tasks = table_service.query_entities('customer', filter=query)
         # print(tasks)
-       # df = pd.DataFrame(df_con(tasks))
-        #data1 = df.to_json(orient='records')
+        df = pd.DataFrame(df_con(tasks))
+        data1 = df.to_json(orient='records')
         # print(data1)
-        return "data1"
+        return data1
 
 
 def df_con(tasks):
